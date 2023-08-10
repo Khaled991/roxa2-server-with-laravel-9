@@ -15,7 +15,7 @@ class OrderController extends Controller
 {
     public function index(Request $request)
     {
-        $orders = QueryBuilder::for(Order::class)->allowedIncludes('products')->paginate();
+        $orders = QueryBuilder::for(Order::class)->defaultSort('-created_at')->allowedIncludes('products')->get();
 
         return new OrderCollection($orders);
 
