@@ -16,11 +16,6 @@ class Order extends Model
 
     protected $fillable = [
         'barcode',
-        'is_active',
-    ];
-
-    protected $casts = [
-        'is_active' => 'boolean',
     ];
 
     public function products(): HasMany

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('order_barcode')->index();
             $table->integer('quantity');
 
-            $table->foreign('order_barcode')->references('barcode')->on('orders');
+            $table->foreign('order_barcode')->references('barcode')->on('orders')->cascadeOnDelete();
         });
     }
 

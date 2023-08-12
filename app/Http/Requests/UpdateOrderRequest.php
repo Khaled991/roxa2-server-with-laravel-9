@@ -22,7 +22,6 @@ class UpdateOrderRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'is_active' => 'sometimes|boolean',
             'products' => 'sometimes|array',
             'products.*.barcode' => 'required|string|max:255',
             'products.*.quantity' => 'required|integer|min:1',

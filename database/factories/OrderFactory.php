@@ -18,7 +18,6 @@ class OrderFactory extends Factory
     {
         return [
             'barcode' => $this->faker->randomNumber(),
-            'is_active' => $this->faker->boolean(),
         ];
     }
 }

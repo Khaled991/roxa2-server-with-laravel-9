@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->string('barcode')->primary();
-            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

@@ -86,8 +86,9 @@ class OrderController extends Controller
         return $productData;
     }
 
-    public function destroy(Request $request, $id)
+    public function destroy(Request $request, Order $order)
     {
+        $order->delete();
 
         return response()->noContent();
     }
